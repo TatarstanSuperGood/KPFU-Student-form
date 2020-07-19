@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <style>
+        @import "css/stylesheet.css";
+    </style>
+
+    <script src="js/gender-helper.js"></script>
+    <script src="js/kpfu-helper.js"></script>
+
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>KPFU Student form</title>
+</head>
+<body onload="loadGroups(); loadSubjects();">
+<div class="main">
+    <p class="container info-welcome">Добро пожаловать!</p>
+    <div class="container student-form">
+        <p class="student-name">Введите свою фамилию:
+            <input class="student-input" placeholder="Фамилия" id="student-name-last">
+        </p>
+        <p class="student-name">Введите свое имя:
+            <input class="student-input" placeholder="Имя" id="student-name-first">
+        </p>
+        <p class="student-name">Введите свое отчество:
+            <input class="student-input" placeholder="Отчество" id="student-name-middle">
+        </p>
+        <p class="student-gender">Выберите пол:
+            <input type="radio" name="male" onclick="reloadMale();" id="student-gender-male">Мужской
+            <input type="radio" name="female" onclick="reloadFemale();" id="student-gender-female">Женский
+        </p>
+        <p class="student-groups">Выберите свою группу:
+            <select class="student-input" id="student-groups"></select>
+        </p>
+        <p class="student-subjects" id="student-subjects">Напиши оценки по своим предметам:</p>
+    </div>
+</div>
+</body>
+</html>
