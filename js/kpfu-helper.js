@@ -1,25 +1,27 @@
 function loadGroups() {
-    document.getElementById("student-groups").innerHTML = this.getAllGroups();
+    this.getAllGroups(document.getElementById("student-groups"));
 }
 
 function loadSubjects() {
-    document.getElementById("student-subjects").innerHTML = this.getAllSubjects(document.getElementById("student-subjects").innerHTML);
+    this.getAllSubjects(document.getElementById("student-subjects"));
 }
 
-function getAllGroups() {
-    var groups = "";
+function getAllGroups(groups) {
+    let innerHTML = groups.innerHTML;
 
-    groups += '<option value="951">951</option>';
-    groups += '<option value="952">953</option>';
-    groups += '<option value="952">953</option>';
+    innerHTML += '<option value="951">951</option>';
+    innerHTML += '<option value="952">952</option>';
+    innerHTML += '<option value="952">953</option>';
 
-    return groups;
+    groups.innerHTML = innerHTML;
 }
 
 function getAllSubjects(subjects) {
-    subjects += getSubject("Математический анализ", "mathematical-analysis");
+    let innerHTML = subjects.innerHTML;
 
-    return subjects;
+    innerHTML += getSubject("Математический анализ", "mathematical-analysis");
+
+    subjects.innerHTML = innerHTML;
 }
 
 function getSubject(name, id) {
