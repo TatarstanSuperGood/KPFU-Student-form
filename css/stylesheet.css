@@ -24,14 +24,18 @@ html {
 
 }
 
-.student-input {
+.student-input, .student-input-large {
     text-align: center;
     font-size: 1em;
     width: 30%;
     border-radius: 10px;
 }
 
-.student-name, .student-gender, .student-groups, .student-subjects {
+.student-input-large {
+    width: 100%;
+}
+
+.student-name, .student-gender, .student-groups, .student-subjects, .student-contents {
     display: grid;
     text-align: center;
     justify-items: center;
