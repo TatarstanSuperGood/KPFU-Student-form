@@ -11,7 +11,7 @@ function getAllGroups(groups) {
 
     innerHTML += '<option value="951">951</option>';
     innerHTML += '<option value="952">952</option>';
-    innerHTML += '<option value="952">953</option>';
+    innerHTML += '<option value="953">953</option>';
 
     groups.innerHTML = innerHTML;
 }
