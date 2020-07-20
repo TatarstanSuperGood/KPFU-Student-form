@@ -6,14 +6,14 @@
     </style>
 
     <script src="js/gender-helper.js"></script>
-    <script src="js/kpfu-helper.js"></script>
+    <script src="js/main.js"></script>
 
     <!-- Required meta tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <title>KPFU Student form</title>
 </head>
-<body onload="loadGroups(); loadSubjects();">
+<body>
 <div class="main">
     <p class="container info-welcome">Добро пожаловать!</p>
     <div class="container student-form">
@@ -34,8 +34,9 @@
             <input class="student-input" placeholder="Группа" id="student-groups">
         </p>
         <p class="student-subjects" id="student-subjects">Оценки по предметам:</p>
+        <p><button onclick="addExam()" id="addEx">Добавить предмет</button></p>
         <p class="student-contents">Мероприятия, в которых Вы принимали участие (через запятую):
-            <textarea class="student-input-large" placeholder="Стальная мышка, Царь сея Руси" id="student-contents"></textarea>
+            <input class="student-input-large" placeholder="Стальная мышка, Царь сея Руси" id="student-contents">
         </p>
     </div>
     <div class="container student-buttons">
@@ -43,8 +44,8 @@
         <button class="student-buttons-save" onclick="saveAllInputs();">Заполнить позже</button>
         <button class="student-buttons-callback" onclick="callbackAllInputs();">Восстановить поля</button>
     </div>
-    <div class="container student-button">
-        <button class="student-send-Form" onclick="callbackAllInputs();">Отправить форму</button>
+    <div class="container student-buttons">
+        <button class="student-send-form" onclick="sendForm();">Отправить форму</button>
     </div>
 </div>
 </body>
