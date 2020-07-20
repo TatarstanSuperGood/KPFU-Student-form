@@ -31,8 +31,17 @@ html {
     border-radius: 10px;
 }
 
-.student-input-large {
+button{
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*.student-input-large {
     width: 100%;
+}*/
+
+textarea{
+    resize: none;
 }
 
 .student-name, .student-gender, .student-groups, .student-subjects, .student-contents {

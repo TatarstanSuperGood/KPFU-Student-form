@@ -30,18 +30,21 @@
             <input type="radio" name="male" onclick="reloadMale();" id="student-gender-male">Мужской
             <input type="radio" name="female" onclick="reloadFemale();" id="student-gender-female">Женский
         </p>
-        <p class="student-groups">Выберите свою группу:
-            <select class="student-input" id="student-groups"></select>
+        <p class="student-groups">Введите свою группу:
+            <input class="student-input" placeholder="Группа" id="student-groups">
         </p>
         <p class="student-subjects" id="student-subjects">Оценки по предметам:</p>
-        <p class="student-contents">Конкурсы, в которых Вы участвовали (через запятую):
-            <input class="student-input-large" placeholder="Стальная мышка, Царь сея Руси" id="student-contents">
+        <p class="student-contents">Мероприятия, в которых Вы принимали участие (через запятую):
+            <textarea class="student-input-large" placeholder="Стальная мышка, Царь сея Руси" id="student-contents"></textarea>
         </p>
     </div>
     <div class="container student-buttons">
-        <button class="student-buttons-clear" onclick="clearAllInputs();"></button>
-        <button class="student-buttons-save" onclick="saveAllInputs();"></button>
-        <button class="student-buttons-callback" onclick="callbackAllInputs();"></button>
+        <button class="student-buttons-clear" onclick="clearAllInputs();">Очистить поля</button>
+        <button class="student-buttons-save" onclick="saveAllInputs();">Заполнить позже</button>
+        <button class="student-buttons-callback" onclick="callbackAllInputs();">Восстановить поля</button>
+    </div>
+    <div class="container student-button">
+        <button class="student-send-Form" onclick="callbackAllInputs();">Отправить форму</button>
     </div>
 </div>
 </body>
