@@ -25,9 +25,17 @@ function sendForm() {
     let firstName = document.getElementById("student-name-first").value;
     let midName = document.getElementById("student-name-middle").value;
     let lastName = document.getElementById("student-name-last").value;
-    //let gender =
+    let gender;
+    let group = document.getElementById("student-groups").value;
+    let events = document.getElementById("student-contents").value;
 
-    console.log(lastName + " " + firstName + " " + midName);
+    if (document.getElementById("student-gender-male").checked){
+        gender = "мужской";
+    } else if (document.getElementById("student-gender-female").checked){
+        gender = "женский";
+    }
+    console.log(lastName + " " + firstName + " " + midName + ". Пол - " + gender + ". Группа - " + group);
+    console.log("Мероприятия: " + events);
 }
 
 class Subjet {
