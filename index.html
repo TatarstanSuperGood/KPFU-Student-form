@@ -17,6 +17,7 @@
 <div class="main">
     <p class="container info-welcome">Добро пожаловать!</p>
     <div class="container student-form">
+        <h1>О себе</h1>
         <p class="student-name">Введите свою фамилию:
             <input class="student-input" placeholder="Фамилия" id="student-name-last">
         </p>
@@ -35,17 +36,62 @@
         </p>
         <p class="student-subjects" id="student-subjects">Оценки по предметам:</p>
         <p><button onclick="addExam()" id="addEx">Добавить предмет</button></p>
-        <p class="student-contents">Мероприятия, в которых вы принимали участие (через запятую):
-            <input class="student-input-large" placeholder="Мероприятия" id="student-contents">
-        </p>
     </div>
+
+    <div class="container test">
+        <h1>Заключительный тест</h1>
+        <p class="student-test">Участвовали ли вы в студенческих сероприятиях?</p>
+        <select class="student-select" id="competitions">
+            <option value>Не выбрано</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+        <p class="student-test">Если да, укажите, в каких.</p>
+        <input class="student-input-test" placeholder="Мероприятия" id="student-contents">
+        <p class="student-test">Боитесь ли вы выступать на публике?</p>
+        <select class="student-select" id="publicSpeech">
+            <option value>Не выбрано</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+        <p class="student-test">Умеете ли вы работать в команде?</p>
+        <select class="student-select" id="teamWork">
+            <option value>Не выбрано</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+        <p class="student-test">Готовы ли вы уделять много времени активу?</p>
+        <select class="student-select" id="spendingTime">
+            <option value>Не выбрано</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+        <p class="student-test">Сможете ли вы совмещать учебу и участие в активе?</p>
+        <select class="student-select" id="combination">
+            <option value>Не выбрано</option>
+            <option value="yes">Да</option>
+            <option value="no">Нет</option>
+        </select>
+        <p class="student-test">Выберите желаемую сферу</p>
+        <select class="student-select" id="choose">
+            <option value>Не выбрано</option>
+            <option value="dancing">Танцы</option>
+            <option value="vocals">Вокал</option>
+            <option value="decorating">Декорации</option>
+            <option value="videoOperator">Оператор</option>
+            <option value="photographer">Фотограф</option>
+            <option value="dj">DJ</option>
+            <option value="idk">Не знаю</option>
+        </select>
+    </div>
+
     <div class="container student-buttons">
         <button class="student-buttons-clear" onclick="clearAllInputs();">Очистить поля</button>
-        <button class="student-buttons-save" onclick="saveAllInputs();">Заполнить позже</button>
+        <button class="student-buttons-save" onclick="callbackAllSave();">Заполнить позже</button>
         <button class="student-buttons-callback" onclick="callbackAllInputs();">Восстановить поля</button>
     </div>
     <div class="container student-buttons">
-        <button class="student-send-form" onclick="sendForm();">Отправить форму</button>
+        <p><button class="student-send-form" onclick="sendForm();" id="sendButton">Отправить форму</button></p>
     </div>
 </div>
 </body>

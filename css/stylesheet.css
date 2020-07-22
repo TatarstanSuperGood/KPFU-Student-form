@@ -21,11 +21,11 @@ html {
     font-weight: bold;
 }
 
-.student-form, .student-buttons {
+.student-form, .student-buttons, .test{
 
 }
 
-.student-input, .student-input-large {
+.student-input, .student-input-large, .student-input-test, .student-input-ball, .student-select {
     text-align: center;
     font-size: 1em;
     width: 30%;
@@ -33,10 +33,18 @@ html {
 }
 
 .student-input-ball{
-    text-align: center;
     font-size: 1.5em;
     width: 5%;
-    border-radius: 10px;
+}
+
+.student-input-test{
+    font-size: 1.5em;
+    width: 30%;
+}
+
+.student-select{
+    font-size: 1.5em;
+    width: 10%;
 }
 
 .student-choose{
@@ -68,7 +76,7 @@ textarea{
 }
 
 
-.student-name, .student-gender, .student-groups, .student-subjects, .student-contents, .student-exams{
+.student-name, .student-gender, .student-groups, .student-subjects, .student-contents, .student-exams, .student-test, .student-result{
     display: grid;
     text-align: center;
     justify-items: center;
